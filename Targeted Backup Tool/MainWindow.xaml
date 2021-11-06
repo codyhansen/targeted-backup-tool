@@ -1,0 +1,21 @@
+﻿<Window x:Class="Targeted_Backup_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Targeted_Backup_Tool"
+        mc:Ignorable="d"
+        Title="Targeted Backup Tool" Height="521.95" Width="292"
+        ResizeMode="NoResize" Icon="icon.png">
+    <Grid>
+        <Label x:Name="lblTarget" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Content="Target Drive/Directory"/>
+        <Label x:Name="lblTargetPath" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" FontStyle="Italic" Content="No Path Chosen"/>
+        <Button x:Name="btnTarget" Content="Select" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="75" Click="SelectTarget"/>
+        <Label x:Name="lblPaths" Content="Paths" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddPath" Content="Add Path" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="75" Click="AddPath"/>
+        <ListBox x:Name="lstPaths" HorizontalAlignment="Left" Height="239" Margin="10,148,0,0" VerticalAlignment="Top" Width="244"/>
+        <Button x:Name="btnRun" Content="Run" HorizontalAlignment="Left" Margin="10,413,0,0" VerticalAlignment="Top" Width="75" Click="Run"/>
+        <Label x:Name="lblResult" Content="" HorizontalAlignment="Left" Margin="10,438,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRemovePath" Content="Remove Path" HorizontalAlignment="Left" Margin="90,123,0,0" VerticalAlignment="Top" Width="75" Click="DeletePath"/>
+    </Grid>
+</Window>
