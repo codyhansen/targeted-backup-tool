@@ -51,7 +51,7 @@ namespace Targeted_Backup_Tool
         {
             // Create path directory in target
             string created_dir = targetDir + '\\' + path.Split('\\').Last();
-            Directory.CreateDirectory(created_dir);
+            Directory.CreateDirectory("\\\\?\\" + created_dir);
             // Copy files inside directory
             foreach (string file in Directory.GetFiles(path))
             {
@@ -60,7 +60,10 @@ namespace Targeted_Backup_Tool
                 {
                     File.Delete(new_path);
                 }
-                File.Copy(file, new_path);
+
+                string long_file = "\\\\?\\" + file;
+                new_path = "\\\\?\\" + new_path;
+                File.Copy(long_file, new_path);
             }
             // Check for subdirectories
             string[] sub_dir = Directory.GetDirectories(path);
